@@ -47,7 +47,14 @@ variables:
   XHARNESS_VERSION: 1.0.0-prerelease.21404.1
 
 
-
+resources:
+  repositories:
+    - repository: xamarin-templates
+      type: github
+      name: xamarin/yaml-templates
+      endpoint: xamarin
+      ref: refs/heads/main
+      
 stages:
   - stage: prepare
     displayName: Prepare Build
